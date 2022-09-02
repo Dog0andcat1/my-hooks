@@ -15,7 +15,7 @@ export default function App() {
           </div>
       </div>
       <footer>Respect | Copyright &copy;
-        2022 Author 你单排吧</footer>
+        2022 Author 小火龙</footer>
     </Layout>
   )
 }
