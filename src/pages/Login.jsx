@@ -4,7 +4,7 @@ import logoImg from '../assets/logo.png'
 import "./less/Login.less"
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Link ,useNavigate} from 'react-router-dom';
-import { LoginApi } from '../request/api';
+import { LoginApi } from '../request/api.ts';
 
 export default function Login() {
   const navigate = useNavigate()

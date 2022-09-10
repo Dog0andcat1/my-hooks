@@ -4,15 +4,14 @@ import logoImg from '../assets/logo.png'
 import "./less/Login.less"
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Link ,useNavigate} from 'react-router-dom';
-import { RegisterApi } from '../request/api';
+import { RegisterApi } from '../request/api.ts';
 export default function Register() {
   const navigate=useNavigate()
   const onFinish = (values) => {
     RegisterApi({
       username:values.username,
-      Password:values.password
-    }).then(
-      res=>{
+      password:values.password
+    }).then(res=>{
         console.log(res)
         if(res.errCode===0){
           message.success(res.message);
