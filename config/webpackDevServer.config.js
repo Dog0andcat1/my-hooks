@@ -100,7 +100,7 @@ module.exports = function (proxy, allowedHost) {
       index: paths.publicUrlOrPath,
     },
     // `proxy` is run between `before` and `after` `webpack-dev-server` hooks
-    proxy:{
+    proxy: {
       '/api': {
         target: 'http://47.93.114.103:6688/manage', // 后台服务地址以及端口号
         changeOrigin: true, //是否跨域
