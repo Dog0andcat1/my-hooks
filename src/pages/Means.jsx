@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './less/Means.less'
 import { Button,  Form, Input, message } from 'antd';
 import { GetUserDataApi,ChangeUserApi } from '../request/api.ts';
@@ -19,12 +19,13 @@ export default function Means() {
         password:values.password
       }).then(res=>{
         if(res.errCode===0){
-          console.log(res)
           message.success(res.message)
+        } else {
+          message.error(res.message)
         }
-        console.log(res)
-      }).catch((e)=>{
-          console.log(e)
+      }).catch((e) => {
+          message.error(e?.message || "网络错误")
+        
         }
       )
     }
